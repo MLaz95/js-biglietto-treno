@@ -1,11 +1,17 @@
+// user prompts
 const km = Number(prompt("Quanto dista la tua destinazione in chilometri?"));
 const age = Number(prompt ("Quanti anni hai?"));
 
+// checks if the user inputs are numbers
 if(Number.isNaN(km) || Number.isNaN(age)){
     document.getElementById("ticket-price").innerHTML = "Non posso calcolare il prezzo del tuo biglietto con questi parametri. Ricarica la pagina per riprovare.";
 
-} else{
-let price = km * 0.21
+// checks if the user's age is possible
+} else if (age > 120){
+    document.getElementById("ticket-price").innerHTML = "La tua età sembra errata, ricarica la pagina per riprovare.";
+
+} else {
+    let price = km * 0.21
 
     if (age < 18){
     price *= 1 - 0.2;
