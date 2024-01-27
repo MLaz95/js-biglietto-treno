@@ -15,14 +15,13 @@ if(Number.isNaN(km) || Number.isNaN(age)){
 
     if (age < 18){
     price *= 1 - 0.2;
+    document.getElementById("discount").innerHTML = `Hai ricevuto lo sconto minorenni del 20%`;
 
     } else if (age > 65){
     price *= 1 - 0.4;
+    document.getElementById("discount").innerHTML = `Hai ricevuto lo sconto senior del 40%`;
     }
 
     document.getElementById("ticket-price").innerHTML = `Il prezzo del tuo biglietto è ${price.toFixed(2)}€.`;
-}
-
-
     
-
+}
