@@ -6,5 +6,13 @@ if (Number.isNaN(tempC)){
 } else {
     const tempF = tempC * (9 / 5) + 32;
     document.getElementById('temp').innerHTML = `The temperature is ${tempF}°F`
+
+    if (tempF > 83){
+        document.getElementById('bg').className += " bg-danger"
+    } else if (tempF < 50){
+        document.getElementById('bg').className += " bg-info"
+    } else{
+        document.getElementById('bg').className += " bg-success"
+    }
 }
 
